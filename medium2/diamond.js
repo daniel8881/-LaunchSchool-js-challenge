@@ -11,12 +11,14 @@ function spaces(n){
   return Array(n + 1).join(' ');
 }
 
-function diamond(n){
+function diamond(char){
+  var letter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','T','U','V','W','X','Y','Z'];
+  var n = letter.indexOf(char) + 1;
   var middleLength = (n - 1) * 2 + 1;
   var middleSpaces = 1;
   var arr = [];
   var outerSpaces = (middleLength - 1) / 2 + 1;
-  var letter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','T','U','V','W','X','Y','Z'];
+  
   
   for(var i = 0; i < n; i++){
     
@@ -35,4 +37,4 @@ function diamond(n){
   return arr.join('\n');
 }
 
-console.log(diamond(5));
+console.log(diamond('E'));
